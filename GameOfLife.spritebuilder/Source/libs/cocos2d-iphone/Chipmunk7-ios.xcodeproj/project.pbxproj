@@ -207,6 +207,7 @@
 		D39ECD8A17ED70D900319DBA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		D39ECDA117ED70D900319DBA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		D3E5F0540AA3303F004E361B /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		D8A036381B3DC6F500711921 /* ObjectiveChipmunk-iPhone-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ObjectiveChipmunk-iPhone-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -349,6 +350,7 @@
 				D39ECD8717ED70D900319DBA /* Frameworks */,
 				D3E5F04A0AA32FDE004E361B /* Products */,
 				B759E5261880C56800E8166C /* main-Info.plist */,
+				D8A036381B3DC6F500711921 /* ObjectiveChipmunk-iPhone-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -737,10 +739,13 @@
 					"\"$(SRCROOT)/external/Chipmunk/include\"",
 					"\"$(SRCROOT)/external/Chipmunk/objectivec/include\"",
 				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "ObjectiveChipmunk-iPhone-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -761,9 +766,11 @@
 					"\"$(SRCROOT)/external/Chipmunk/include\"",
 					"\"$(SRCROOT)/external/Chipmunk/objectivec/include\"",
 				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "ObjectiveChipmunk-iPhone-Bridging-Header.h";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
